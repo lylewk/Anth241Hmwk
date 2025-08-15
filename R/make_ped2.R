@@ -18,9 +18,12 @@ make_ped2=function ()
   Dam=c(NA,NA,'Unknown','Unknown','Rhaella','Rhaella',NA,'Lyanna','Daenerys')
   sex=c('M','F','M','F','M','F','F','M','M')
   Pedigree=data.frame(Indiv=Indiv,Sire=Sire,Dam=Dam,Sex=sex)
-
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
+  dev.next()
   optiSel::pedplot(Pedigree)
   sto=optiSel::pedInbreeding(Pedigree)
   row.names(sto)=NULL
   return(sto)
 }
+
