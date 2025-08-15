@@ -26,6 +26,8 @@
 Fig3_13=function (w=c(0.7635,1,0.0001),x=c(0.65,0.95),y=c(0.77,0.82),
                   tan.int=.01)
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   w.AA=w[1]
   w.AB=w[2]
   w.BB=w[3]
@@ -45,3 +47,4 @@ Fig3_13=function (w=c(0.7635,1,0.0001),x=c(0.65,0.95),y=c(0.77,0.82),
   n=length(tans)
   for(i in 1:n) tangent(tans[i])
 }
+
