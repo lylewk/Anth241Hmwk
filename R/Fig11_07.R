@@ -22,6 +22,8 @@
 #' @export
 Fig11_07 = function ()
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   dacount=structure(list(age = c(0, 0.50137, 1.00274, 1.50411, 2.00274,
     2.50411, 3.00274, 3.50411, 4.00274, 4.589041, 5.005479, 5.591781,
     6.005479, 6.558904, 7.005479, 7.254795, 7.506849, 8.005479, 8.506849,
@@ -40,3 +42,4 @@ Fig11_07 = function ()
   plot(dacount,xlab='Age',ylab='Stature (cm)',main="Count de Montbeillard's son")
   lines(seq(0,20,.1),predict(pbheight.dist,newdata=list(age=seq(0,20,.1))))
 }
+
