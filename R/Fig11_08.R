@@ -23,6 +23,8 @@
 #' @export
 Fig11_08 = function ()
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   env=new.env()
   assign('age',seq(0,20,.1),envir=env)
   parms=coef(pbheight.dist)
@@ -38,3 +40,4 @@ Fig11_08 = function ()
   plot(seq(0,20,.1),y,type='l',xlab='Age',ylab='Instantaneous Growth Rate',
        main='Velocity Curve')
 }
+
