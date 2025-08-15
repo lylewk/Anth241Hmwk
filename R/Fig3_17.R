@@ -28,6 +28,8 @@
 #' @export
 Fig3_17=function (N=10,gens=100,jit=0)
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   demes=100
   sim.line=function(){
     p=0
@@ -45,3 +47,4 @@ Fig3_17=function (N=10,gens=100,jit=0)
     lines(1:gens,jitter(p,jit))
   }
 }
+
