@@ -18,6 +18,8 @@
 #' @export
 Fig3_9=function (w=c(0.7635,1,0.0001),p.start=c(0.0001,0.9999))
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   p=0.0001
   t=0:42
   w.AA=w[1]
@@ -41,3 +43,4 @@ Fig3_9=function (w=c(0.7635,1,0.0001),p.start=c(0.0001,0.9999))
     lines(t,p)
   }
 }
+
