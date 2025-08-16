@@ -5,6 +5,8 @@ the relationship between number of alleles and heterozygosity, plot a geneaologi
 inbreeding coefficients from "Game of Thrones," various population genetic models and simulations
 (including the coalescent), and Preece-Baines distance, velocity, and acceleration curves.
 
+<b>Warning:</b>
+
 <h3>To install, paste the following two lines to the R console:</h3>
 install.packages('devtools')
 
