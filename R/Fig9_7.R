@@ -28,6 +28,8 @@
 #' @export
 Fig9_7 = function ()
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   library(ape)
   set.seed(1234)
   tree=my_rcoal2(n=36,100,100,0)
@@ -35,3 +37,4 @@ Fig9_7 = function ()
   plot(c(0,37,0,37),c(depth,0,depth,0),type='n',axes=F,xlab='',ylab='')
   plot_tree(tree,muts=T)
 }
+
