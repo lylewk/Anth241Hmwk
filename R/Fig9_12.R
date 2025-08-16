@@ -42,6 +42,8 @@
 #' @export
 Fig9_12 = function (old.popsize=2,when=10)
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   library(ape)
   set.seed(1234)
   tree<-my_rcoal2(n=36,1000,old.popsize,when)
@@ -51,3 +53,4 @@ Fig9_12 = function (old.popsize=2,when=10)
   mut.rate=(old.popsize-2)*(0.01-.25)/998+.25
   plot_tree(tree)
 }
+
