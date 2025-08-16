@@ -76,12 +76,10 @@ plot_tree = function (phy,mut.rate=0,x.offset=0,muts=T)
       freqs[diffs+1]=freqs[diffs+1]+1
     }
   }
-  if(.Platform$OS.type=='windows') quartz=function() windows()
-  quartz()
-  dev.next()
   tot=sum(freqs)
   running=cumsum(freqs)
   top=min(which(running==tot))
   y=freqs[1:top]/sum(freqs)*100
   my_hist(y)
 }
+
