@@ -26,6 +26,8 @@
 #' @export
 Tab3_2=function (AA=136,AB=66,BB=17)
   {
+    if(.Platform$OS.type=='windows') quartz=function() windows()
+    quartz()
     AA=round(AA,0)
     AB=round(AB,0)
     BB=round(BB,0)
@@ -72,3 +74,4 @@ Tab3_2=function (AA=136,AB=66,BB=17)
     cat(round(tot.p,6))
     cat('\n')
   }
+
