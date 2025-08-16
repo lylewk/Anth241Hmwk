@@ -51,6 +51,8 @@ Fig9_12 = function (old.popsize=2,when=10)
   plot(c(0,37,0,37),c(depth,0,depth,0),type='n',axes=F,xlab='',ylab='',
        main=paste('Old size = ',old.popsize, 'Expansion at ',when))
   mut.rate=(old.popsize-2)*(0.01-.25)/998+.25
+  quartz()
   plot_tree(tree)
 }
+
 
