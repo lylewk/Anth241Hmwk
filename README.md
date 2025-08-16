@@ -5,7 +5,10 @@ the relationship between number of alleles and heterozygosity, plot a geneaologi
 inbreeding coefficients from "Game of Thrones," various population genetic models and simulations
 (including the coalescent), and Preece-Baines distance, velocity, and acceleration curves.
 
-<b>Warning:</b>
+<b>Warning:</b> Plots are intentionally <i>not</i> sent to the RStudio plot area (lower right quarter).
+Instead, they are opened in new windows.  You may have to hunt around for these windows (look for window icons)
+and open them (if there are icons).  To copy the plots your best bet is to copy as bitmap and paste to your document.
+Once you have copied the plot be sure to close the plot so that you do not get a plethora of plots.
 
 <h3>To install, paste the following two lines to the R console:</h3>
 install.packages('devtools')
