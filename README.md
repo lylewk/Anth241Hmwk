@@ -1,4 +1,4 @@
-Anthropology 241 (Human Biological Variation) homework
+<h1>Anthropology 241 (Human Biological Variation) homework
 
 To install, paste the following two lines to the R console:      
 install.packages('devtools')  
