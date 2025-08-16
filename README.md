@@ -10,7 +10,7 @@ Instead, they are opened in new windows.  You may have to hunt around for these 
 and open them (if there are icons).  To copy the plots your best bet is to copy as bitmap and paste to your document.
 Once you have copied the plot be sure to close the plot so that you do not get a plethora of plots.
 
-<h3>To install, paste the following two lines to the R console:</h3>
+<h3>To install: Mark, copy, and paste the following two lines to the R console:</h3>
 install.packages('devtools')
 
 devtools::install_github('lylewk/Anth241Hmwk',dependencies = T)
