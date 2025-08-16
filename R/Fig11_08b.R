@@ -25,6 +25,8 @@
 #' @export
 Fig11_08b = function ()
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   env=new.env()
   assign('age',seq(0,20,.1),envir=env)
   parms=coef(pbheight.dist)
@@ -43,3 +45,4 @@ Fig11_08b = function ()
        main='Acceleration Curve')
   abline(h=0)
 }
+
