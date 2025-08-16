@@ -6,5 +6,6 @@ inbreeding coefficients from "Game of Thrones," various population genetic model
 (including the coalescent), and Preece-Baines distance, velocity, and acceleration curves.
 
 <h3>To install, paste the following two lines to the R console:</h3>
-install.packages('devtools')       
+install.packages('devtools')
+
 devtools::install_github('lylewk/Anth241Hmwk',dependencies = T)
