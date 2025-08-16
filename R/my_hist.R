@@ -3,6 +3,8 @@
 #' @noRd
 my_hist = function (y)
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   n.rects=length(y)
   plot(c(-.5,n.rects),c(0,max(y)),type='n',axes=F,xlab='No. of Differences',ylab='Percent')
   for(i in 1:n.rects){
@@ -11,3 +13,4 @@ my_hist = function (y)
   axis(1,at=0:100,pos=0)
   axis(2)
 }
+
