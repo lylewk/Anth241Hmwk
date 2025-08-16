@@ -1,6 +1,8 @@
 #' @export
 Fig9_4and5=function (popsize=100)
 {
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   library(ape)
   tree=my.rcoal2(n=20,popsize,popsize,0)
   depth = get.tree.depth(tree)
@@ -8,3 +10,4 @@ Fig9_4and5=function (popsize=100)
   plot.tree(tree,muts=F)
   axis(2)
 }
+
