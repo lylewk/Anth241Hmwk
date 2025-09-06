@@ -23,8 +23,8 @@
 #' @export
 Fig9_6 = function (popsize1=100,popsize2=1000)
 {
-#  if(.Platform$OS.type=='windows') quartz=function() windows()
-#  quartz()
+  if(.Platform$OS.type=='windows') quartz=function() windows()
+  quartz()
   library(ape)
   set.seed(1234)
   tree1=my_rcoal2(n=20,popsize1,popsize1,0)
@@ -37,5 +37,6 @@ Fig9_6 = function (popsize1=100,popsize2=1000)
   plot_tree(tree2,x.offset=25,muts=F)
   axis(2)
 }
+
 
 
